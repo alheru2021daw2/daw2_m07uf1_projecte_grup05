@@ -16,5 +16,7 @@ class producte{
     }
 }
 $producte = new producte();
-
+function __toString(){
+    return $s.','$n.','$c.','$i.','$p.',';
+}
 ?>
