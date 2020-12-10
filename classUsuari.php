@@ -1,8 +1,8 @@
 <?php
-    class usuari{
-        protected $identificador;
+    class usuari implements Client{
+        public $id =uniqid();
 
-        public function __construct(){
+        public function __construct($id){
             $this->identificador = $id;
         }
     }
