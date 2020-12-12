@@ -8,7 +8,7 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#">Registrarse</a></li>
+            <li><a href="registro.php">Registrarse</a></li>
             <li><a href="#">Iniciar sesión</a></li>
         </ul>
     </nav>

@@ -1,6 +1,6 @@
 <?php
-    include('classComanda.php');
-    include('classUsuari.php');
+    //include('classComanda.php');
+    //include('classUsuari.php');
 
     class Producte{
         public $seccio;
@@ -9,20 +9,20 @@
         public $imatge;
         public $preu;
 
-        public function __construct($s,$n,$i,$p){
+        public function __construct($s,$n,$c,$i,$p){
             $this->seccio = $s;
             $this->nom = $n;
-            $this->codi = uniqid();
+            $this->codi = $c;
             $this->imatge = $i;
             $this->preu = $p;
         }
 
-        function getCodi(){
+        /*function getCodi(){
             return $this->codi;
-        }
+        }*/
 
         public function __toString(){
-            return $this->seccio.','.$this->nom.','.$this->codi.','.$this->imatge.','.$this->preu;
+            return $this->seccio.'|'.$this->nom.'|'.$this->codi.'|'.$this->imatge.'|'.$this->preu;
         }
     }
 
