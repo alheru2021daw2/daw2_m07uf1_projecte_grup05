@@ -4,21 +4,29 @@
 
     class Comanda{
         private $id;
-        private $numComanda;
-        private $idUsuari;
-        private $codiProducte;
+        public $numComanda;
+        public $usuari;
+        public $codiProducte;
         public $data;
 
-    public function __construct($id, $numComanda, $idUsuari, $codiProducte, $data){
-        $this->id = $id.$idUsuari.strval($numComanda);
+    public function __construct($id, $numComanda, $usuari, $codiProducte, $data){
+        $this->id = $id;
         $this->numComanda = $numComanda;
-        $this->idUsuari = $idUsuari->getId();
-        $this->codiProducte = $codiProducte->getCodi();
+        $this->usuari = $usuari;
+        $this->codiProducte = $codiProducte;
         $this->data = $data;
     }
 
+    public function getId(){
+        return $this->id;
+    }
+
+    public function setId($id){
+        $this->id=$id;
+    }
+
     public function __toString(){
-        return $this->id.'|'.$this->numComanda.'|'.$this->idUsuari.'|'.$this->codiProducte.'|'.$this->data;
+        return $this->id.'|'.$this->numComanda.'|'.$this->usuari.'|'.$this->codiProducte.'|'.$this->data;
     }
 }
 ?>

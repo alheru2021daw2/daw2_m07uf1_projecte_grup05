@@ -10,7 +10,7 @@
         private $adreca;
         public $correu;
         public $telefon;
-        public $visa;
+        private $visa;
         private $admin;
 
         public function __construct($id, $nomUsuari, $contrasenya, $nomComplet, $adreca, $correu, $telefon, $visa, $admin){
@@ -41,6 +41,10 @@
             return $this->contrasenya;
         }
 
+        public function getNomUsuari(){
+            return $this->nomUsuari;
+        }
+
         public function getNomComplet(){
             return $this->nomComplet;
         }
@@ -49,32 +53,18 @@
             return $this->adreca;
         }
 
-        public function setId($id){
-            $this->id = $id;
+        public function getVisa(){
+            return $this->visa;
         }
 
-        public function setnomUsuari($nomUsuari){
-            $this->$nomUsuari = $nomUsuari;
-        }
-
-        public function setContrasenya($contrasenya){
+        public function setUsuari($nomUsuari, $contrasenya, $nomComplet, $adreca, $correu, $telefon, $visa){
+            $this->nomUsuari = $nomUsuari;
             $this->contrasenya = $contrasenya;
-        }
-
-        public function setNomComplet($nomComplet){
             $this->nomComplet = $nomComplet;
-        }
-
-        public function setAdreca($adreca){
             $this->adreca = $adreca;
-        }
-
-        public function setCorreu($correu){
             $this->correu = $correu;
-        }
-
-        public function setTelefon($telefon){
             $this->telefon = $telefon;
+            $this->visa = $visa;
         }
 
         public function setAdmin($admin){

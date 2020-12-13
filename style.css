@@ -1,0 +1,103 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+article{
+    display: inline-block;
+    background-color: lightgrey;
+    max-width: 128px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.image-holder{
+    position: relative;
+    width: 128px;
+    height: 128px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.image-holder img{
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #1751ff;
+}
+
+a:hover{
+    color: #599deb;
+}
+
+hr{
+    border: 1px solid #1751ff;
+}
+
+main{
+    padding: 20px;
+}
+
+nav{
+    position: sticky;
+    top: 0%;
+    display: block;
+    background-color: white;
+    border-bottom: 2px solid #1751ff;
+    height: 50px;
+    z-index: 2;
+}
+
+nav ul{
+    float: right;
+    height: auto;
+    overflow: hidden;
+}
+
+nav ul, nav ul li{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    display: inline-flex;
+    height: 50px;
+    align-items: center;
+    padding: 0px 16px 0px 16px;
+}
+
+hr.linea2{
+    border: 0.5px solid lightgrey;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead{
+    background-color: #1751ff;
+    color: white;
+}
+
+table th, table td{
+    text-align: center;
+    padding: 8px 0px 8px 0px;
+}
+
+table tr:nth-child(even){
+    background-color: lightgrey;
+}

@@ -3,13 +3,13 @@
     //include('classUsuari.php');
 
     class Producte{
-        public $seccio;
-        public $nom;
         private $codi;
-        public $imatge;
+        public $nom;
+        public $seccio;
         public $preu;
+        public $imatge;
 
-        public function __construct($s,$n,$c,$i,$p){
+        public function __construct($c,$n,$s,$p,$i){
             $this->seccio = $s;
             $this->nom = $n;
             $this->codi = $c;
@@ -17,12 +17,16 @@
             $this->preu = $p;
         }
 
-        /*function getCodi(){
+        function getCodi(){
             return $this->codi;
-        }*/
+        }
+
+        function setCodi($codi){
+            $this->codi = $codi;
+        }
 
         public function __toString(){
-            return $this->seccio.'|'.$this->nom.'|'.$this->codi.'|'.$this->imatge.'|'.$this->preu;
+            return $this->codi.'|'.$this->nom.'|'.$this->seccio.'|'.$this->preu.'|'.$this->imatge;
         }
     }
 

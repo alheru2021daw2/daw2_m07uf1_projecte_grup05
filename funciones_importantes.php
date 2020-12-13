@@ -47,7 +47,7 @@
                 }
                 break;
             case 'comanda':
-                $comanda = llegirFitxer('dades/comandes.txt');
+                $comanda = llegirFitxer('dades/comanda.txt');
                 if($comanda != null){
                     foreach($comanda as $obj){
                         array_push($objArray, new Comanda($obj[0], $obj[1], $obj[2], $obj[3], $obj[4]));
@@ -63,5 +63,47 @@
         foreach($objArray as $obj){
             if($obj->uniqueUsername($nomUsuari)) return true;
         }
+    }
+
+    function cercaUsuari($objArray, $nomUsuari){
+        $i = 0;
+
+        foreach($objArray as $obj){
+            if($obj->uniqueUsername($nomUsuari)) return $i;
+            $i++;
+        }
+
+        return null;
+    }
+
+    function cercaUsuariId($objArray, $id){
+
+        $i = 0;
+
+        foreach($objArray as $obj){
+            if($obj->getId() == ($id)) return $i;
+            $i++;
+        }
+        return null;
+    }
+
+    function cercaProducteId($objArray, $id){
+        $i = 0;
+        foreach($objArray as $obj){
+            if($obj->getCodi() == $id) return $i;
+            $i++;
+        }
+        return null;
+    }
+
+    function cercaComandaId($objArray, $id){
+
+        $i = 0;
+
+        foreach($objArray as $obj){
+            if($obj->getId() == ($id)) return $i;
+            $i++;
+        }
+        return null;
     }
 ?>
