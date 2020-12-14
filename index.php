@@ -20,6 +20,7 @@
         <div class="articulos">
             <?php
                 $categoria = Array();
+                $equals = false;
                 foreach($productes as $producte){
                     foreach($categoria as $valor){
                         $equals = false;
@@ -30,8 +31,8 @@
                     }
                     if(!$equals){
                         array_push($categoria, $producte->seccio);
-                    };
-                };
+                    }
+                }
                 foreach($categoria as $valor){
                     echo '<section>';
                     echo '<h2>'.$valor.'</h2>';
